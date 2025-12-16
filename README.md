@@ -16,33 +16,32 @@ Volevo un progetto semplice ma concreto per capire meglio:
 ---
 
 ##  Cosa fa
-Il tool effettua un al momento solo il protocollo tcp per le scansioni.  
-Per ogni porta:
+Il tool al momento  può effettuare scansioni udp,scansioni tcp o scansioni normali:
 
 1. crea una socket IPv4/TCP  
 2. tenta `connect(ip, porta)`  
-3. se non ci sono errori → la porta risulta **open**
-
-È lo stesso principio usato da Nmap nel suo `-sT`.
+3. se non ci sono errori → la porta risulta **open** se no open/filtred, close ecc
+ 
 
 ---
 
 ## Funzionalità attuali
 - Scansione completa 1–65535  
 - Stampa immediata delle porte aperte  
-- Timeout configurabile  
 - Modalità semplice e leggibile  
-- Codice pulito e facile da estendere  
+- Codice pulito e facile da estendere
+- udp,tcp e normale
 
 ---
 
 ## 🔥 Funzionalità future (work in progress)
 Sto lavorando per aggiungere:
 - Banner grabbing (lettura risposta dopo la connect)  
-- Scansione UDP  
+~~Scansione UDP~~  
 - Salvataggio dei risultati su file  
-- Range di porte personalizzati  
-- Output più pulito e colorato  
+~~Range di porte personalizzati~~  
+- Output più pulito e colorato
+- evasioni come la frammentazione
 
 L’obiettivo è far crescere questo tool mentre imparo.
 
@@ -53,4 +52,4 @@ L’obiettivo è far crescere questo tool mentre imparo.
 - **funzioni extra** — test, mini-script, prove  
 - **README.md** — documentazione del progetto  
 
-Ho scelto questa struttura per mantenerlo modulare e facile da es
+
